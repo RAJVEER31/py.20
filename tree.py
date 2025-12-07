@@ -1,9 +1,10 @@
-def treerec (num):
-    if num < 1:
+def treerec (n, num):
+    if n < 1 or n > num:
         return
-    treerec (num - 1)
-    print (num)
+    print (n)
+    treerec (n - 1 , num)
+    print (n)
 print ("Enter a number:")
 num = int (input ())
-print ("The numbers from 1 to", num, "are:")
-treerec(num)
+print ("The numbers from 1 to", num, "and back are:")
+treerec(num, num)
